@@ -1,0 +1,22 @@
+minikube start --driver=docker
+# comando para rodar o kubernets usando o driver do docker
+
+kubectl get pods
+# lista os containers
+
+& minikube -p minikube docker-env | invoke-expression
+
+docker build -t snake .
+
+cd nginx
+docker build -t nginx-proxy:latest .
+cd ..
+
+docker images
+
+kubectl apply -f ./k8s/
+kubectl get pods
+
+kubectl port-forward service/prometheus 9090:9090 - roda esse comando para o prometheus funcionar
+
+minikube service nginx-service --url

@@ -1,0 +1,16 @@
+#CODGGO FEITO EM SALA
+
+apiVersion: v1
+kind: Service
+metadata:
+  # ATUALIZADO
+  name: snake-service
+spec:
+  selector:
+    # ATUALIZADO
+    app: snake
+  ports:
+  - protocol: TCP
+    port: 3123
+    targetPort: 3123
+  type: NodePort

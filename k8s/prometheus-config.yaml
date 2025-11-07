@@ -1,0 +1,16 @@
+#CODGGO FEITO EM SALA
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 5s
+    scrape_configs:
+      # ATUALIZADO
+      - job_name: 'snake'
+        static_configs:
+          # ATUALIZADO
+          - targets: ['snake-service:3123']

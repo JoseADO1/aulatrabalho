@@ -1,0 +1,27 @@
+#CODGGO FEITO EM SALA
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # ATUALIZADO
+  name: snake
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      # ATUALIZADO
+      app: snake
+  template:
+    metadata:
+      labels:
+        # ATUALIZADO
+        app: snake
+    spec:
+      containers:
+        - name: snake
+          # ATUALIZADO: Este é o nome correto da imagem
+          image: auladockerprojeto/snake:latest
+          # ATUALIZADO: Garante que ele sempre baixe a imagem nova
+          imagePullPolicy: Always 
+          ports:
+          - containerPort: 3123
