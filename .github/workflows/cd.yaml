@@ -28,7 +28,7 @@ jobs:
         id: vars
         run: |
           # Sintaxe de PowerShell para $GITHUB_OUTPUT
-          echo "IMAGE=ensfla/snake" >> $env:GITHUB_OUTPUT
+          echo "IMAGE=auladockerprojeto/snake" >> $env:GITHUB_OUTPUT
           
           # Sintaxe de PowerShell para substring
           $SHA = "${{ github.event.workflow_run.head_sha }}"
